@@ -57,6 +57,11 @@ label {
     font-weight: 750;
 }
 .entry { display: flex; gap: 10px; }
+.latest-value { width: 100%; margin: 0 0 14px; }
+.actions { display: grid; gap: 10px; }
+.actions button { width: 100%; }
+.actions button[type="button"] { background: #bd5a2c; }
+.actions button[type="button"]:hover { background: #a94922; }
 input {
     min-width: 0;
     flex: 1;

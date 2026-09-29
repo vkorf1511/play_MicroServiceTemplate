@@ -20,8 +20,13 @@ def landing_page() -> HTMLResponse:
         <form id="birthday-form">
             <label for="birthday">Your birthday</label>
             <div class="entry">
-                <input id="birthday" name="birthday" type="date" placeholder="MM/DD/YYYY" autocomplete="bday" required>
+                <input id="birthday" name="birthday" type="date" min="1900-01-01" autocomplete="bday" required>
+            </div>
+            <label for="latest-birthday">Latest saved birthday</label>
+            <input id="latest-birthday" class="latest-value" type="text" placeholder="No birthday loaded" readonly>
+            <div class="actions">
                 <button type="submit">Save birthday</button>
+                <button id="load-latest" type="button">Load latest birthday</button>
             </div>
             <p id="status" role="status" aria-live="polite"></p>
         </form>
